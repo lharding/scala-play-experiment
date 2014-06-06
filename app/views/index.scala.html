@@ -1,0 +1,19 @@
+@(users: Seq[_root_.play.api.libs.json.JsValue])
+
+@main("Neckbeard Level Dashboard") {
+
+    <script type='text/javascript' src='@routes.Assets.at("javascripts/index.min.js")'></script>
+
+    <div class="well">
+        <h3>Please select a user below.</h3>
+    </div>
+
+    <select id="userpicker">
+        @for(user <- users) {
+        <option value='@((user\"id").as[String])'>
+            @((user\"first_name").as[String])
+            @((user\"last_name").as[String])
+            (@((user\"id").as[String]))</option>
+        }
+    </select>
+}

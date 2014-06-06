@@ -1,0 +1,10 @@
+@(length: Double,
+        nextFastFood: String,
+        nextFastFoodCost: Double,
+        nextNerdy: String,
+        nextNerdyCost: Double)
+<ul class="stats">
+    <li class="neckbeard">Current <abbr title="Daily amount spent on nerdy stores like Frys, plus amount spent daily on fast food squared, as a fraction of total income, roughly predicts length of maximal neckbeard strand.">neckbeard length</abbr>: <span class="stat">@("%.1f".format(length))cm</span>
+    <li class="fast-food">Next fast food run: <span class="stat">@nextFastFood for $@("%.2f".format(nextFastFoodCost))</span>
+    <li class="toys">Next videogame, gadget, or media spree: <span class="stat">@nextNerdy for $@("%.2f".format(nextNerdyCost))</span>
+</ul>
