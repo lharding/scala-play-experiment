@@ -15,6 +15,10 @@ $(function() {
             success: function(data) {
                 console.log(data);
                 $(".well").html(data);
+            },
+            failure: function() {
+                console.log(arguments);
+                $("#well").html("<h3>An error occurred while compiling stats.</h3>");
             }
         });
     };

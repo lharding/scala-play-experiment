@@ -45,6 +45,12 @@ class NerdStatsControllerSpec extends Specification {
       contentAsString(result) must contain("pvernigorov")
     }
 
+    "respond to an username-less getStats Action with 401 UNAUTHORIZED" in new WithApplication {
+      val result = new TestController().getStats(FakeRequest())
+
+      status(result) must equalTo(UNAUTHORIZED)
+    }
+
     "respond to the getStats Action" in new WithApplication {
         val result = new TestController().getStats(
           FakeRequest().withHeaders(("Authorization", AUTH_ENCODED)))
