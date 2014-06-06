@@ -1,5 +1,7 @@
 # Geezeo Other Stats Dashboard
 
+![My image](https://raw.githubusercontent.com/lharding/geezeo-test/master/screenshot.png)
+
 A simple application that uses the Geezeo API to calculate a couple of less-common
 statistics for the users a given partner account can access.
 
